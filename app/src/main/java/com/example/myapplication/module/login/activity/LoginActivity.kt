@@ -1,14 +1,21 @@
 package com.example.myapplication.module.login.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.text.TextUtils
 import android.text.TextWatcher
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import com.chad.library.adapter.base.BaseProviderMultiAdapter
 import com.example.myapplication.databinding.ActivityLoginBinding
 import com.example.myapplication.module.login.model.LoginViewModel
+import com.example.myapplication.module.main.MainActivity
 
+/**
+ * 登录
+ */
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
@@ -24,6 +31,12 @@ class LoginActivity : AppCompatActivity() {
         // 获取viewModel
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
+        if (TextUtils.isEmpty(binding.etUsername.text.toString()).not()) {
+            viewModel.username.value = binding.etUsername.text.toString()
+        }
+        if (TextUtils.isEmpty(binding.etPassword.text.toString()).not()) {
+            viewModel.password.value = binding.etPassword.text.toString()
+        }
 
         // 输入用户名
         binding.etUsername.addTextChangedListener(object : TextWatcher {
@@ -56,9 +69,18 @@ class LoginActivity : AppCompatActivity() {
 
             viewModel.login().observe(this){
                 it?.let {
-                    Toast.makeText(this, "登录成功：用户名：${it.username}, admin：${it.admin}}", Toast.LENGTH_LONG).show()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtras(Bundle().apply {
+                        putSerializable("userInfo", it)
+                    })
+                    startActivity(intent)
+                    finish()
                 }
             }
+        }
+        // 点击注册
+        binding.tvGotoRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 }

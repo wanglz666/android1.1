@@ -13,8 +13,17 @@ object LoginRepository {
 
     private val service = ApiClient.instance.instanceRetrofit(WanAndroidAPI::class.java)
 
-    suspend fun login(username: String, password: String) = withContext(Dispatchers.IO) {
-        service.loginAction(username, password).data
-    }
+    suspend fun login(username: String, password: String) =
+        withContext(Dispatchers.IO) {
+
+            service.loginAction(username, password).data
+        }
+
+    suspend fun register(username: String, password: String, rePassword: String) =
+
+        withContext(Dispatchers.IO) {
+
+            service.registerAction(username, password, rePassword)
+        }
 
 }

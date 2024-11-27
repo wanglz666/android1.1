@@ -44,6 +44,23 @@ dependencies {
     def rxJava2_version = "2.2.21"
     def rxAndroid2_version = "2.1.1"
 
+    //smartRefresh
+//    api 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'
+//    api 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'
+    implementation 'androidx.appcompat:appcompat:1.0.0'                 //必须 1.0.0 以上
+
+    implementation  'io.github.scwang90:refresh-layout-kernel:3.0.0-alpha'      //核心必须依赖
+    implementation  'io.github.scwang90:refresh-header-classics:3.0.0-alpha'    //经典刷新头
+    implementation  'io.github.scwang90:refresh-header-radar:3.0.0-alpha'       //雷达刷新头
+    implementation  'io.github.scwang90:refresh-header-falsify:3.0.0-alpha'     //虚拟刷新头
+    implementation  'io.github.scwang90:refresh-header-material:3.0.0-alpha'    //谷歌刷新头
+    implementation  'io.github.scwang90:refresh-header-two-level:3.0.0-alpha'   //二级刷新头
+    implementation  'io.github.scwang90:refresh-footer-ball:3.0.0-alpha'        //球脉冲加载
+    implementation  'io.github.scwang90:refresh-footer-classics:3.0.0-alpha'    //经典加载
+
+
+
+
     // eventbus
     implementation 'org.greenrobot:eventbus:3.2.0'
     // BaseRecyclerViewAdapterHelper
