@@ -1,0 +1,28 @@
+
+//登录成功
+{
+    "data": {
+        "admin": false,
+        "chapterTops": [],
+        "coinCount": 10,
+        "collectIds": [],
+        "email": "",
+        "icon": "",
+        "id": 153012,
+        "nickname": "teaeggs",
+        "password": "",
+        "publicName": "teaeggs",
+        "token": "",
+        "type": 0,
+        "username": "teaeggs"
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+
+//登录失败
+{
+    "data": null,
+    "errorCode": -1,
+    "errorMsg": "账号密码不匹配！"
+}
