@@ -17,19 +17,19 @@ interface WanAndroidAPI {
      */
     @POST("user/login")
     @FormUrlEncoded
-    fun loginAction(@Field("username") username:String
+    suspend fun loginAction(@Field("username") username:String
                     ,@Field("password") password :String)
-    : Observable<HttpResponse<LoginResponse>>
+    : HttpResponse<LoginResponse>
 
     /**
      * 注册
      */
     @POST("user/register")
     @FormUrlEncoded
-    fun registerAction(@Field("username") username:String
+    suspend fun registerAction(@Field("username") username:String
                        ,@Field("password") password :String
                        ,@Field("repassword") repassword :String)
-            : Observable<HttpResponse<LoginResponse>>
+            : HttpResponse<LoginResponse>
 
 
 }
