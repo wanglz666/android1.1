@@ -10,8 +10,13 @@ import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
+import com.example.myapplication.base.component.toast.BaseToast
+import com.example.myapplication.base.component.toast.ToastParams
+import com.example.myapplication.base.component.toast.style.CustomToastStyle
 import com.example.myapplication.base.utils.constant.ConstData
 import com.example.myapplication.base.utils.constant.ItemType
+import com.example.myapplication.base.utils.extend.successToast
+import com.example.myapplication.base.utils.extend.toast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.login.model.LoginResponse
 import com.example.myapplication.module.secondlevel.ExpandListActivity
@@ -34,6 +39,7 @@ class MainActivity : AppCompatActivity() , OnRefreshLoadMoreListener {
 
         initParams()
         initRecyclerView()
+
     }
 
     private fun initRecyclerView() {
@@ -63,11 +69,8 @@ class MainActivity : AppCompatActivity() , OnRefreshLoadMoreListener {
             if (it.containsKey("userInfo")){
                 val userInfo = it.getSerializable("userInfo") as LoginResponse
                 userInfo.let { loginResponse ->
-                    Toast.makeText(
-                        this,
-                        "登录成功：用户名：${loginResponse.username}",
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    BaseToast.show("登录成功：用户名：${loginResponse.username}")
+                    "登录成功：用户名：${loginResponse.username}".successToast()
                 }
             }
         }

@@ -93,7 +93,7 @@ public class ExpandListActivity extends AppCompatActivity {
     private void updateChildData(int groupPosition, int childPosition) {
         // 更新子项数据的示例
         DataEntity childData = mData.get(groupPosition).get(childPosition);
-        childData.setTitle("Updated Name"); // 假设 BaseDataVO 有 setName 方法
+        childData.setTitle("Updated Name");
 
         // 通知适配器数据已更改
         mAdapter.notifyDataSetChanged();
