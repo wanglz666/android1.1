@@ -30,6 +30,9 @@
         <activity
             android:name=".module.login.activity.RegisterActivity"
             android:exported="false" />
+        <activity
+            android:name=".module.secondlevel.ExpandListActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

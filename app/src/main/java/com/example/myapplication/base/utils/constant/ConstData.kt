@@ -17,7 +17,7 @@ object ConstData {
     fun initMainData() : List<DataEntity>{
 
         return arrayListOf<DataEntity>().apply {
-            add(DataEntity("Item-Title-1","ExpandList二级列表",1))
+            add(DataEntity("Item-Title-1","ExpandList二级列表",ItemType.ITEM_EXPAND_LISTVIEW_TYPE))
             add(DataEntity("Item-Title-2","RecyclerView列表拖动",2))
             add(DataEntity("Item-Title-3","RecyclerViews双列表拖动",3))
             add(DataEntity("Item-Title-4","BaseMultiItemQuickAdapter快速使用简单的多类型",4))

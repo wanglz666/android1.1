@@ -10,5 +10,5 @@ data class DataEntity(
 
     var imgRes: Int? = 0
     var url: String? = ""
-    var type: Int? = 0
+    var type: Int? = level
 }

@@ -1,5 +1,6 @@
 package com.example.myapplication.module.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,8 +11,10 @@ import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.utils.constant.ConstData
+import com.example.myapplication.base.utils.constant.ItemType
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.login.model.LoginResponse
+import com.example.myapplication.module.secondlevel.ExpandListActivity
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
@@ -47,11 +50,11 @@ class MainActivity : AppCompatActivity() , OnRefreshLoadMoreListener {
 
         mAdapter.setOnItemClickListener { adapter, _, pos ->
             val item = adapter.getItem(pos) as DataEntity
-            Toast.makeText(
-                this,
-                item.title,
-                Toast.LENGTH_SHORT
-            ).show()
+            when (item.type) {
+                ItemType.ITEM_EXPAND_LISTVIEW_TYPE -> {
+                    startActivity(Intent(this, ExpandListActivity::class.java))
+                }
+            }
         }
     }
 
