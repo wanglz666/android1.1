@@ -2,8 +2,8 @@ package com.example.myapplication.base.component
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.base.utils.ClickDebounce
 import com.example.myapplication.base.utils.constant.ConstData
 import com.example.myapplication.base.utils.extend.errorToast
 
@@ -12,7 +12,15 @@ abstract class BaseActivity : AppCompatActivity() , IBaseActivity{
 
     protected lateinit var mActivity: BaseActivity
 
+    /**
+     * 当前activity名称
+     */
     protected lateinit var TAG: String
+
+    /**
+     * 防止快速点击
+     */
+    protected val clickDebounce = ClickDebounce()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

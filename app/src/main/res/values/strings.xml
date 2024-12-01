@@ -48,4 +48,7 @@
     <string name="demo_show_toast_in_background_state_result_2">我是在后台显示的 Toast（安卓 11 及以上在后台显示只能使用系统样式）</string>
     <string name="demo_show_toast_in_background_state_result_3">我是在后台显示的 Toast</string>
     <string name="demo_combining_window_framework_use_result">就问你溜不溜</string>
+
+    <string name="no_data_now">暂时没有数据哦～</string>
+    <string name="no_news_for_the_moment">暂时没有消息哦～</string>
 </resources>
