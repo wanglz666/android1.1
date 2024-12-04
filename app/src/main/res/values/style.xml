@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="text_normal">
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:textColor">@color/color_333333</item>
+    <!-- 模式主题 -->
+    <style name="App.Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 导航栏颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 通知栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <!-- 控件选中后颜色 -->
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!-- 隐藏 ActionBar -->
+        <item name="windowActionBar">false</item>
+        <!-- 页面无标题 -->
+        <item name="windowNoTitle">true</item>
+        <!-- 窗口背景色 -->
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+    <style name="App.TransparentBg" parent="App.Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
     </style>
 
+    <!-- 首页导航栏 -->
+    <style name="MainBottomNavigationMenuStyle">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <!--文本-->
+    <style name="style_text_normal">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--输入框-->
+    <style name="style_edit_normal">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--按钮-->
+    <style name="style_btn_normal">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:background">@drawable/bg_full_primary_radius20</item>
+    </style>
     <!--分割线-->
-    <style name="line">
+    <style name="style_line_normal">
         <item name="android:layout_height">1dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@color/color_666666</item>

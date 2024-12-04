@@ -79,7 +79,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         // 点击注册
-        binding.tvGotoRegister.setOnClickListener {
+        binding.btnRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
