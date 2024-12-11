@@ -12,6 +12,7 @@ data class DataEntity(
     var imgRes: Int? = 0
     var url: String? = ""
     var level: Int? = null
+    var itemList: MutableList<DataEntity>? = null
 
 
     override val itemType: Int = type
