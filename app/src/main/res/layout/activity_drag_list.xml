@@ -4,9 +4,17 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_click_view_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/style_text_primary"
+        android:text="查看当前顺序"
+        android:textSize="18sp"
+        android:paddingVertical="@dimen/dp_10"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

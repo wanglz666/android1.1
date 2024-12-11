@@ -44,8 +44,20 @@ object ConstData {
                     ItemType.ITEM_BRVAH_MULTI_TYPE
                 )
             )
-            add(DataEntity("RecyclerView", "BRVAH-RecyclerView实现列表拖动", 2))
-            add(DataEntity("RecyclerView", "BRVAH-RecyclerViews实现双列表互相拖动", 3))
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-RecyclerView实现列表拖动",
+                    ItemType.ITEM_BRVAH_DRAG_TYPE
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-RecyclerViews实现双列表互相拖动",
+                    ItemType.ITEM_BRVAH_DOUBLE_DRAG_TYPE
+                )
+            )
             add(
                 DataEntity(
                     "RecyclerView",

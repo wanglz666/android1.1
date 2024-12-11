@@ -13,6 +13,7 @@ import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.login.model.LoginResponse
 import com.example.myapplication.module.expandlistview.ExpandListActivity
+import com.example.myapplication.module.recyclerview.drag.DragListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
@@ -72,6 +73,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 }
                 ItemType.ITEM_BRVAH_MULTI_TYPE -> {
                     intent.setClass(this, BRVAHMultiListActivity::class.java)
+                }
+                ItemType.ITEM_BRVAH_DRAG_TYPE -> {
+                    intent.setClass(this, DragListActivity::class.java)
                 }
             }
 

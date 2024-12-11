@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
+import java.util.Collections;
+import java.util.List;
+
 public class ItemTouchCallback extends ItemTouchHelper.Callback {
 
     private final BaseQuickAdapter adapter;
@@ -25,6 +28,13 @@ public class ItemTouchCallback extends ItemTouchHelper.Callback {
     public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
         int fromPosition = viewHolder.getBindingAdapterPosition();
         int toPosition = target.getBindingAdapterPosition();
+
+        // 获取 adapter 数据源
+        List<?> data = adapter.getData();
+        // 移动数据源中的元素
+        Collections.swap(data, fromPosition, toPosition);
+
+        // 通知 adapter 数据已变更
         adapter.notifyItemMoved(fromPosition, toPosition);
         return true;
     }

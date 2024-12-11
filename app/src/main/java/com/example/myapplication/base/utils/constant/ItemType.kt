@@ -21,4 +21,12 @@ object ItemType {
      * BRVAH复杂多类型列表
      */
     const val ITEM_BRVAH_MULTI_TYPE = 4
+    /**
+     * 列表拖拽
+     */
+    const val ITEM_BRVAH_DRAG_TYPE = 5
+    /**
+     * 双列表拖拽
+     */
+    const val ITEM_BRVAH_DOUBLE_DRAG_TYPE = 6
 }
