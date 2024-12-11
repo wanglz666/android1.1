@@ -15,15 +15,57 @@ object ConstData {
 
 
     fun initMainData() : List<DataEntity>{
-
-        return arrayListOf<DataEntity>().apply {
-            add(DataEntity("Item-Title-1","ExpandList二级列表",ItemType.ITEM_EXPAND_LISTVIEW_TYPE))
-            add(DataEntity("Item-Title-2","RecyclerView列表拖动",2))
-            add(DataEntity("Item-Title-3","RecyclerViews双列表拖动",3))
-            add(DataEntity("Item-Title-4","BaseMultiItemQuickAdapter快速使用简单的多类型",4))
-            add(DataEntity("Item-Title-5","BaseProviderMultiAdapter多类型复杂列表",5))
-            add(DataEntity("Item-Title-6","BaseSectionQuickAdapter快速实现带头部的 Adapter",6))
-            add(DataEntity("Item-Title-7","BaseNodeAdapter类似节点树功能的Adapter，具有展开、收起节点的功能",7))
+        val dataList = arrayListOf<DataEntity>().apply {
+            add(
+                DataEntity(
+                    "ExpandableListView",
+                    "ExpandableListView实现二级可展开列表",
+                    ItemType.ITEM_EXPAND_LISTVIEW_TYPE
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "RecyclerView.Adapter实现多类型列表",
+                    ItemType.ITEM_SIMPLE_MULTI_TYPE
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-BaseMultiItemQuickAdapter快速使用简单的多类型",
+                    ItemType.ITEM_BRVAH_SIMPLE_MULTI_TYPE
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-BaseProviderMultiAdapter实现多类型并且业务复杂的列表",
+                    ItemType.ITEM_BRVAH_MULTI_TYPE
+                )
+            )
+            add(DataEntity("RecyclerView", "BRVAH-RecyclerView实现列表拖动", 2))
+            add(DataEntity("RecyclerView", "BRVAH-RecyclerViews实现双列表互相拖动", 3))
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-BaseSectionQuickAdapter快速实现带头部的 Adapter",
+                    6
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
+                    "BRVAH-BaseNodeAdapter类似节点树功能的Adapter，具有展开、收起节点的功能",
+                    7
+                )
+            )
         }
+
+        dataList.forEachIndexed { index, dataEntity ->
+            dataEntity.level = index+1
+        }
+
+        return dataList
     }
 }

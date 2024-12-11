@@ -27,7 +27,21 @@
     <style name="MainBottomNavigationMenuStyle">
         <item name="android:textSize">10sp</item>
     </style>
-    <!--文本-->
+    <!--主文本深灰色：#212121 或 #333333-->
+    <style name="style_text_primary">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/color_212121</item>
+    </style>
+    <!--次级文本-->
+    <style name="style_text_secondary">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/color_757575</item>
+    </style>
+    <!--白色文本-->
     <style name="style_text_normal">
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center_vertical</item>

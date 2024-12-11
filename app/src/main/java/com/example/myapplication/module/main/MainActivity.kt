@@ -1,30 +1,21 @@
 package com.example.myapplication.module.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.View.OnClickListener
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
-import com.example.myapplication.base.component.toast.BaseToast
-import com.example.myapplication.base.component.toast.ToastParams
-import com.example.myapplication.base.component.toast.style.CustomToastStyle
-import com.example.myapplication.base.utils.callback.OnSingleClickListener
 import com.example.myapplication.base.utils.constant.ConstData
 import com.example.myapplication.base.utils.constant.ItemType
 import com.example.myapplication.base.utils.extend.successToast
-import com.example.myapplication.base.utils.extend.toast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.login.model.LoginResponse
-import com.example.myapplication.module.secondlevel.ExpandListActivity
-import com.scwang.smart.refresh.layout.SmartRefreshLayout
+import com.example.myapplication.module.expandlistview.ExpandListActivity
+import com.example.myapplication.module.recyclerview.multiList.BRVAHMultiListActivity
+import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiListActivity
+import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 
@@ -35,6 +26,10 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mAdapter: MainAdapter
+
+    companion object{
+        const val MAIN_DATA_KEY = "main_value"
+    }
 
     override fun bindView(): View {
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -61,10 +56,27 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
 
         mAdapter.setOnItemClickListener { adapter, _, pos ->
             val item = adapter.getItem(pos) as DataEntity
+            val intent = Intent()
+            val bundle = Bundle()
+            bundle.putString(MAIN_DATA_KEY, item.title)
+            intent.putExtras(bundle)
             when (item.type) {
                 ItemType.ITEM_EXPAND_LISTVIEW_TYPE -> {
-                    startActivity(Intent(this, ExpandListActivity::class.java))
+                    intent.setClass(this, ExpandListActivity::class.java)
                 }
+                ItemType.ITEM_SIMPLE_MULTI_TYPE -> {
+                    intent.setClass(this, SimpleMultiListActivity::class.java)
+                }
+                ItemType.ITEM_BRVAH_SIMPLE_MULTI_TYPE -> {
+                    intent.setClass(this, BRVAHSimpleMultiListActivity::class.java)
+                }
+                ItemType.ITEM_BRVAH_MULTI_TYPE -> {
+                    intent.setClass(this, BRVAHMultiListActivity::class.java)
+                }
+            }
+
+            intent.component?.className?.let {
+                startActivity(intent)
             }
         }
     }
@@ -83,10 +95,13 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
     override fun onRefresh(refreshLayout: RefreshLayout) {
         refreshLayout.finishRefresh()
 
+        this.getString(R.string.refresh_success).successToast()
     }
 
     override fun onLoadMore(refreshLayout: RefreshLayout) {
         refreshLayout.finishLoadMore()
+
+        this.getString(R.string.load_success).successToast()
     }
 }
 

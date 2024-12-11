@@ -73,7 +73,7 @@ object EmptyViewHelper {
             when (type) {
                 PAGE_STATUS_INFO -> {
                     imgEmpty.setImageResource(R.mipmap.ic_page_status_data)
-                    txvTitle.text = root.context.getString(R.string.no_news_for_the_moment)
+                    txvTitle.text = root.context.getString(R.string.no_message)
                 }
 
                 PAGE_STATUS_DATA -> {
@@ -83,7 +83,7 @@ object EmptyViewHelper {
                             R.mipmap.ic_page_status_data
                         )
                     )
-                    txvTitle.text = text ?: root.context.getString(R.string.no_data_now)
+                    txvTitle.text = text ?: root.context.getString(R.string.no_data)
                     val layoutParams = txvTitle.layoutParams as LinearLayout.LayoutParams
                     layoutParams.setMargins(50, 0, 50, 0)
                     txvTitle.layoutParams = layoutParams

@@ -49,6 +49,10 @@
     <string name="demo_show_toast_in_background_state_result_3">我是在后台显示的 Toast</string>
     <string name="demo_combining_window_framework_use_result">就问你溜不溜</string>
 
-    <string name="no_data_now">暂时没有数据哦～</string>
-    <string name="no_news_for_the_moment">暂时没有消息哦～</string>
+    <string name="no_data">暂时没有数据哦～</string>
+    <string name="no_message">暂时没有消息哦～</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_error">刷新失败</string>
+    <string name="load_success">加载成功</string>
+    <string name="load_error">加载失败</string>
 </resources>

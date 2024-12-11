@@ -32,7 +32,16 @@
             android:name=".module.login.activity.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".module.secondlevel.ExpandListActivity"
+            android:name=".module.expandlistview.ExpandListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".module.recyclerview.multiList.SimpleMultiListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".module.recyclerview.multiList.BRVAHSimpleMultiListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".module.recyclerview.multiList.BRVAHMultiListActivity"
             android:exported="false" />
     </application>
 

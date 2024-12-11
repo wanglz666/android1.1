@@ -1,6 +1,5 @@
 package com.example.myapplication.module.main
 
-import android.content.Context
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.example.myapplication.R

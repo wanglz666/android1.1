@@ -7,35 +7,38 @@
     app:cardCornerRadius="10dp"
     app:cardElevation="10dp"
     android:layout_marginTop="@dimen/dp_10"
-    android:layout_marginHorizontal="5dp"
-    >
+    android:layout_marginHorizontal="5dp">
 
-    <LinearLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="15dp">
-        <TextView
+        android:padding="12dp">
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_level"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            style="@style/style_text_normal"
+            style="@style/style_text_primary"
             tools:text="1"/>
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_title"
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
-            tools:text="Item-TitleTitleTitle"
-            style="@style/style_text_normal"/>
-        <TextView
+            tools:text="Item-TitleTitleTitleTitle"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/style_text_primary"/>
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_content"
             android:layout_width="0dp"
             android:layout_weight="5"
             android:layout_height="wrap_content"
-            tools:text="Item-Contentttttttttttttttttt"
-            style="@style/style_text_normal"/>
-    </LinearLayout>
+            tools:text="Item-ContentttttttttttttttttContenttttttttttttttttttContentttttContentttttttttttttttttttttttttttttttt"
+            android:maxLines="2"
+            android:ellipsize="end"
+            style="@style/style_text_secondary"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.cardview.widget.CardView>
