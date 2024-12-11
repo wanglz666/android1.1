@@ -43,6 +43,9 @@
         <activity
             android:name=".module.recyclerview.multiList.BRVAHMultiListActivity"
             android:exported="false" />
+        <activity
+            android:name=".module.recyclerview.drag.DragListActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
