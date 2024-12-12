@@ -38,7 +38,7 @@ public class ItemSpanDragHelper {
     // 是否是跨 RecyclerView 拖动
     private boolean spanDrag = false;
     // 拖动的各种回调
-    private OnItemDragCallBack onItemDragCallBack;
+    private final OnItemDragCallBack onItemDragCallBack;
 
     /**
      * 横向滚动的RecyclerView

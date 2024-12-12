@@ -23,9 +23,9 @@ import java.util.List;
  */
 public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBack {
 
-    private Context context;
+    private final Context context;
     // 数据集
-    private List<DataEntity> multiItemEntities;
+    private final List<DataEntity> multiItemEntities;
 
     public ItemSpanDragCallback(Context context, List<DataEntity> multiItemEntities) {
         this.context = context;
@@ -35,7 +35,7 @@ public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBa
     @Override
     public void onDragStart(@NonNull RecyclerView.ViewHolder viewHolder) {
         View view = viewHolder.itemView;
-        view.setBackground(context.getDrawable(R.drawable.bg_full_ffffff_frame_999999_width1_dash3));
+        view.setBackgroundResource(R.drawable.bg_full_ffffff_frame_999999_width1_dash3);
     }
 
     @Override
@@ -95,8 +95,12 @@ public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBa
         }
 
         // 更新数据集
-        multiItemEntities.get(recyclerViewFromPosition).setItemList(fromAdapter.getData());
-        multiItemEntities.get(recyclerViewToPosition).setItemList(toAdapter.getData());
+        if (fromAdapter != null) {
+            multiItemEntities.get(recyclerViewFromPosition).setItemList(fromAdapter.getData());
+        }
+        if (toAdapter != null) {
+            multiItemEntities.get(recyclerViewToPosition).setItemList(toAdapter.getData());
+        }
     }
 
     @Override
