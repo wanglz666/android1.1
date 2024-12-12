@@ -1,22 +1,17 @@
 package com.example.myapplication.module.recyclerview.multiList
 
 import android.content.Context
-import android.view.LayoutInflater
 import android.view.LayoutInflater.*
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
-import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.utils.extend.infoToast
-import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ItemStyle1Binding
 import com.example.myapplication.databinding.ItemStyle2Binding
 import com.example.myapplication.databinding.ItemStyle3Binding
 import com.example.myapplication.module.recyclerview.common.ItemTypeConst
-import com.example.myapplication.module.recyclerview.common.Style1ViewHolder
-import com.example.myapplication.module.recyclerview.common.Style2ViewHolder
-import com.example.myapplication.module.recyclerview.common.Style3ViewHolder
 
 /**
  * Created by WangLiZhi on 2024/12/11.
@@ -79,4 +74,7 @@ class SimpleMultiListAdapter(val context: Context, val mData: MutableList<DataEn
             }
         }
     }
+    class Style1ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
+    class Style2ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
+    class Style3ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
 }
