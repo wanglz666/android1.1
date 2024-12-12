@@ -111,7 +111,8 @@ public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBa
 
     @Override
     public void onDragEnd(@NonNull RecyclerView.ViewHolder viewHolder) {
-
+        View view = viewHolder.itemView;
+        view.setBackgroundResource(android.R.color.transparent);
     }
 
     /**
