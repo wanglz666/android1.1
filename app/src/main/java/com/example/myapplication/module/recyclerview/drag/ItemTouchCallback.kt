@@ -1,4 +1,4 @@
-package com.example.myapplication.base.utils.callback
+package com.example.myapplication.module.recyclerview.drag
 
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView

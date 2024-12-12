@@ -72,7 +72,7 @@ object EmptyViewHelper {
         } else {
             when (type) {
                 PAGE_STATUS_INFO -> {
-                    imgEmpty.setImageResource(R.mipmap.ic_page_status_data)
+                    imgEmpty.setImageResource(R.mipmap.ic_page_status_error)
                     txvTitle.text = root.context.getString(R.string.no_message)
                 }
 

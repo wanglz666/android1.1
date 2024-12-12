@@ -6,17 +6,15 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.base.component.BaseActivity
-import com.example.myapplication.base.utils.callback.ItemTouchCallback
 import com.example.myapplication.base.utils.constant.ConstData
 import com.example.myapplication.base.utils.extend.hasData
 import com.example.myapplication.base.utils.extend.infoLongToast
-import com.example.myapplication.base.utils.extend.infoToast
 import com.example.myapplication.databinding.ActivityDragListBinding
 import java.util.Collections
 
 /**
  * Created by WangLiZhi on 2024/12/11.
- * Desc：
+ * Desc：列表拖动
  */
 
 class DragListActivity : BaseActivity() {

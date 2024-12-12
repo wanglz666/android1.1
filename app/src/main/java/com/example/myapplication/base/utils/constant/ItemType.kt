@@ -28,5 +28,21 @@ object ItemType {
     /**
      * 双列表拖拽
      */
-    const val ITEM_BRVAH_DOUBLE_DRAG_TYPE = 6
+    const val ITEM_BRVAH_PAIR_DRAG_TYPE = 6
+    /**
+     * 二级列表带吸顶
+     */
+    const val ITEM_CEILING_TYPE = 7
+    /**
+     * 首页二级列表带吸顶
+     */
+    const val ITEM_MAIN_CEILING_TYPE = 8
+    /**
+     * 节点列表
+     */
+    const val ITEM_BRVAH_NODE_TYPE = 9
+    /**
+     * 实现可以滑动关闭的弹窗
+     */
+    const val ITEM_DIALOG_SLIDE_TYPE = 10
 }

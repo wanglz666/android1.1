@@ -12,6 +12,8 @@ object ConstData {
 
     const val CURRENT_ACTIVITY = "CurrentActivity"
 
+    const val PUBLIC_TAG = "PublicTag"
+
 
 
     fun initMainData() : List<DataEntity>{
@@ -47,6 +49,13 @@ object ConstData {
             add(
                 DataEntity(
                     "RecyclerView",
+                    "BRVAH-BaseNodeAdapter类似节点树功能的Adapter，具有展开、收起节点的功能",
+                    ItemType.ITEM_BRVAH_NODE_TYPE
+                )
+            )
+            add(
+                DataEntity(
+                    "RecyclerView",
                     "BRVAH-RecyclerView实现列表拖动",
                     ItemType.ITEM_BRVAH_DRAG_TYPE
                 )
@@ -55,23 +64,31 @@ object ConstData {
                 DataEntity(
                     "RecyclerView",
                     "BRVAH-RecyclerViews实现双列表互相拖动",
-                    ItemType.ITEM_BRVAH_DOUBLE_DRAG_TYPE
+                    ItemType.ITEM_BRVAH_PAIR_DRAG_TYPE
                 )
             )
             add(
                 DataEntity(
                     "RecyclerView",
-                    "BRVAH-BaseSectionQuickAdapter快速实现带头部的 Adapter",
-                    6
+                    "RecyclerView实现二级列表带吸顶效果",
+                    ItemType.ITEM_CEILING_TYPE
                 )
             )
             add(
                 DataEntity(
                     "RecyclerView",
-                    "BRVAH-BaseNodeAdapter类似节点树功能的Adapter，具有展开、收起节点的功能",
-                    7
+                    "RecyclerView实现首页二级列表带吸顶效果",
+                    ItemType.ITEM_MAIN_CEILING_TYPE
                 )
             )
+            add(
+                DataEntity(
+                    "Dialog",
+                    "实现可以滑动关闭的弹窗",
+                    ItemType.ITEM_DIALOG_SLIDE_TYPE
+                )
+            )
+
         }
 
         dataList.forEachIndexed { index, dataEntity ->

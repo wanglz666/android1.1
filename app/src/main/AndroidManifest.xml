@@ -46,6 +46,9 @@
         <activity
             android:name=".module.recyclerview.drag.DragListActivity"
             android:exported="false" />
+        <activity
+            android:name=".module.recyclerview.drag.PairDragListActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
