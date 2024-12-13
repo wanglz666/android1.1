@@ -1,12 +1,18 @@
 package com.example.myapplication.module.recyclerview.multiList
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.viewbinding.ViewBinding
+import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.provider.BaseItemProvider
 import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.utils.extend.infoToast
+import com.example.myapplication.databinding.ItemStyle1Binding
 import com.example.myapplication.module.recyclerview.common.ItemTypeConst
 
 
@@ -20,18 +26,14 @@ class BRVAHMultiListProvider1 : BaseItemProvider<DataEntity>() {
     override val layoutId: Int
         get() = R.layout.item_style1
 
-    /*
-     * （可选）
-     * 重写返回自己的 ViewHolder。
-     * 默认返回 BaseViewHolder()
-     */
-    fun onCreateViewHolder(parent: ViewGroup): BaseViewHolder {
-        return super.onCreateViewHolder(parent,ItemTypeConst.STYLE1)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder {
+        val binding = ItemStyle1Binding.inflate(LayoutInflater.from(context))
+        return ProviderViewHolder(binding)
     }
     override fun convert(helper: BaseViewHolder, item: DataEntity) {
-
-
-        helper.setText(R.id.tv_style1, item.title)
+        val binding = ItemStyle1Binding.bind(helper.itemView)
+        binding.recyclerView.layoutManager = GridLayoutManager(context, 4)
+        binding.recyclerView.adapter = ProviderAdapter(item.itemList!!)
 
     }
 
@@ -40,6 +42,14 @@ class BRVAHMultiListProvider1 : BaseItemProvider<DataEntity>() {
 
     }
 
+    class ProviderViewHolder(binding: ViewBinding): BaseViewHolder(binding.root)
 
+    class ProviderAdapter(mData: MutableList<DataEntity>) : BaseQuickAdapter<DataEntity, BaseViewHolder>(R.layout.item_simple_image, mData) {
+        override fun convert(holder: BaseViewHolder, item: DataEntity) {
+
+            holder.setText(R.id.tv_title, item.title)
+        }
+
+    }
 
 }

@@ -24,11 +24,11 @@ class BRVAHMultiListActivity : BaseActivity() {
         if (mData == null) {
             mData = arrayListOf()
 
-            repeat(10) {
+            repeat(5) {
                 val int = Random.nextInt(1, 4)
                 val dataEntity = DataEntity("Style-Title", "Style-Content", int)
                 mItemData = arrayListOf()
-                repeat(3) {
+                repeat(5) {
                     val itemDataEntity = DataEntity("Item-Style-Title", "Item-Style-Content", int)
                     mItemData!!.add(itemDataEntity)
                 }
