@@ -69,4 +69,20 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:background">@color/color_666666</item>
     </style>
+    <!--分割线-->
+    <style name="style_line_f5f5f5">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/color_F5F5F5</item>
+    </style>
+    <!--实现BottomSheetDialog圆角效果-->
+    <style name="BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+    <style name="bottomSheetStyleWrapper">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!--背景不变暗-->
+        <!--        <item name="android:backgroundDimEnabled">false</item>-->
+    </style>
 </resources>

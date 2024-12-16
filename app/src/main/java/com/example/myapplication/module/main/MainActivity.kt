@@ -11,6 +11,7 @@ import com.example.myapplication.base.utils.constant.ConstData
 import com.example.myapplication.base.utils.constant.ItemType
 import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ActivityMainBinding
+import com.example.myapplication.module.dialog.BaseBottomSheetDialog
 import com.example.myapplication.module.login.model.LoginResponse
 import com.example.myapplication.module.expandlistview.ExpandListActivity
 import com.example.myapplication.module.recyclerview.drag.DragListActivity
@@ -18,6 +19,7 @@ import com.example.myapplication.module.recyclerview.drag.PairDragListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 
@@ -81,6 +83,13 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 ItemType.ITEM_BRVAH_PAIR_DRAG_TYPE -> {
                     intent.setClass(this, PairDragListActivity::class.java)
                 }
+                ItemType.ITEM_DIALOG_SLIDE_TYPE -> {
+                    val dialog = BaseBottomSheetDialog(mActivity)
+                    dialog.show()
+//                    val dialog = BottomSheetDialog(this, R.style.BottomSheetDialog)
+//                    dialog.setContentView(R.layout.dialog_bottom_sheet_layout)
+//                    dialog.show()
+                }
             }
 
             intent.component?.className?.let {
@@ -111,5 +120,6 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
 
         this.getString(R.string.load_success).successToast()
     }
+
 }
 
