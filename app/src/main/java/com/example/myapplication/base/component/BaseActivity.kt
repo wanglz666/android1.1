@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.base.utils.ClickDebounce
-import com.example.myapplication.base.utils.constant.ConstData
+import com.example.myapplication.base.utils.constant.GlobalConst
 import com.example.myapplication.base.utils.extend.errorToast
 
 abstract class BaseActivity : AppCompatActivity() , IBaseActivity{
@@ -41,7 +41,7 @@ abstract class BaseActivity : AppCompatActivity() , IBaseActivity{
         ActivityManager.addActivity(mActivity)
 
         TAG = mActivity.javaClass.simpleName
-        Log.e(ConstData.CURRENT_ACTIVITY, ConstData.CURRENT_ACTIVITY + " = " + TAG)
+        Log.e(GlobalConst.CURRENT_ACTIVITY, GlobalConst.CURRENT_ACTIVITY + " = " + TAG)
 
 
 //        initToolBar();

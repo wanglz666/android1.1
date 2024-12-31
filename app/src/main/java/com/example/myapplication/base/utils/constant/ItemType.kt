@@ -45,4 +45,8 @@ object ItemType {
      * 实现可以滑动关闭的弹窗
      */
     const val ITEM_DIALOG_SLIDE_TYPE = 10
+    /**
+     * Text流式布局
+     */
+    const val ITEM_FLOW_TEXT_TYPE = 11
 }

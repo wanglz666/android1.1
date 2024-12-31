@@ -1,6 +1,6 @@
 package com.example.myapplication.base.http
 
-import com.example.myapplication.base.utils.constant.ConstData
+import com.example.myapplication.base.utils.constant.GlobalConst
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -33,7 +33,7 @@ class ApiClient {
 
 
         val retrofit:Retrofit = Retrofit.Builder()
-            .baseUrl(ConstData.BASE_URL)
+            .baseUrl(GlobalConst.BASE_URL)
             //请求
             .client(mOkHttpClient)
             //响应

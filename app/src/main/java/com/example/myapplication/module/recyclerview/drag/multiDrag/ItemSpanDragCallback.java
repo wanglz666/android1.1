@@ -13,7 +13,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.example.myapplication.R;
 import com.example.myapplication.base.bean.DataEntity;
 import com.example.myapplication.base.utils.DeepCopyUtil;
-import com.example.myapplication.base.utils.constant.ConstData;
+import com.example.myapplication.base.utils.constant.GlobalConst;
 
 import java.util.Collections;
 import java.util.List;
@@ -64,7 +64,7 @@ public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBa
         BaseQuickAdapter<DataEntity, BaseViewHolder> adapter = (BaseQuickAdapter) recyclerView.getAdapter();
         if (adapter != null) {
             DataEntity item = adapter.getData().get(fromViewHolder.getLayoutPosition());
-            Log.d(ConstData.PUBLIC_TAG, "onSpanDragIntercepter: "+item.getTitle());
+            Log.d(GlobalConst.PUBLIC_TAG, "onSpanDragIntercepter: "+item.getTitle());
         }
 
         return false;
@@ -110,7 +110,7 @@ public class ItemSpanDragCallback implements ItemSpanDragHelper.OnItemDragCallBa
 
     @Override
     public void clearView(@NonNull RecyclerView.ViewHolder viewHolder, DataEntity itemData) {
-        Log.d(ConstData.PUBLIC_TAG, "clearView: "+itemData.getTitle());
+        Log.d(GlobalConst.PUBLIC_TAG, "clearView: "+itemData.getTitle());
     }
 
     @Override

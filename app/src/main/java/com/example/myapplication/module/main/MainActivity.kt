@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
-import com.example.myapplication.base.utils.constant.ConstData
+import com.example.myapplication.base.utils.constant.GlobalConst
 import com.example.myapplication.base.utils.constant.ItemType
 import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -16,10 +16,10 @@ import com.example.myapplication.module.login.model.LoginResponse
 import com.example.myapplication.module.expandlistview.ExpandListActivity
 import com.example.myapplication.module.recyclerview.drag.DragListActivity
 import com.example.myapplication.module.recyclerview.drag.PairDragListActivity
+import com.example.myapplication.module.flowLayout.TextFlowActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 
@@ -51,7 +51,7 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
         binding.recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.recyclerView.adapter = mAdapter
-        mAdapter.setList(ConstData.initMainData())
+        mAdapter.setList(GlobalConst.initMainData())
 
 //        binding.refreshLayout.autoRefresh()
         binding.refreshLayout.setEnableLoadMoreWhenContentNotFull(false);//取消内容不满一页时开启上拉加载功能
@@ -89,6 +89,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
 //                    val dialog = BottomSheetDialog(this, R.style.BottomSheetDialog)
 //                    dialog.setContentView(R.layout.dialog_bottom_sheet_layout)
 //                    dialog.show()
+                }
+                ItemType.ITEM_FLOW_TEXT_TYPE -> {
+                    intent.setClass(this, TextFlowActivity::class.java)
                 }
             }
 
