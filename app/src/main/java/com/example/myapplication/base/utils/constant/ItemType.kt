@@ -49,4 +49,8 @@ object ItemType {
      * Text流式布局
      */
     const val ITEM_FLOW_TEXT_TYPE = 11
+    /**
+     * 左划列表
+     */
+    const val ITEM_SWIPE_LAYOUT_TYPE = 12
 }

@@ -97,6 +97,13 @@ object GlobalConst {
                     ItemType.ITEM_FLOW_TEXT_TYPE
                 )
             )
+            add(
+                DataEntity(
+                    "列表滑动",
+                    "类似QQ左划",
+                    ItemType.ITEM_SWIPE_LAYOUT_TYPE
+                )
+            )
 
         }
 

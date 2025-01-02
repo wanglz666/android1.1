@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.myapplication.base.component.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:preview="end"
+    app:autoClose="true"
+    app:designer="@string/classic_designer"
+    android:layout_height="80dp"
+    android:layout_width="match_parent">
+    <!-- This is the left menu, because it specifies `layout_gravity=start` -->
+    <TextView
+        android:id="@+id/left_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/color_FF0000"
+        android:gravity="center"
+        android:text="LEFT"
+        android:textSize="18sp" />
+
+    <!-- This is the right menu -->
+   <LinearLayout
+       android:layout_width="200dp"
+       android:layout_height="match_parent"
+       android:layout_gravity="end">
+       <TextView
+           android:id="@+id/right_menu"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:background="@color/color_00FF00"
+           android:gravity="center"
+           android:text="RIGHT"
+           android:textSize="18sp" />
+       <TextView
+           android:id="@+id/right_menu2"
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="match_parent"
+           android:background="@color/color_673AB7"
+           android:gravity="center"
+           android:text="RIGHT2"
+           android:textSize="18sp" />
+   </LinearLayout>
+
+    <!-- This is the content, because it dows not specify `layout_gravity` -->
+    <LinearLayout
+        android:id="@+id/item_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Content"
+            android:background="@color/white"
+            android:textSize="18sp" />
+
+        <View style="@style/style_line_f5f5f5"/>
+    </LinearLayout>
+
+
+
+</com.example.myapplication.base.component.swipe.SwipeLayout>
