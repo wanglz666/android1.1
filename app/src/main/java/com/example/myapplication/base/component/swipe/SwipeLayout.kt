@@ -17,6 +17,7 @@ import kotlin.math.abs
 
 /**
  * Created by Aitsuki on 2017/2/23.
+ * https://github.com/aitsuki/SwipeMenuRecyclerView/tree/master
  */
 class SwipeLayout @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
