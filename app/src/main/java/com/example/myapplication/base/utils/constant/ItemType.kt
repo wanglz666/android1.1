@@ -53,4 +53,8 @@ object ItemType {
      * 左划列表
      */
     const val ITEM_SWIPE_LAYOUT_TYPE = 12
+    /**
+     * 回弹动画
+     */
+    const val ITEM_SPRING_BACK_TYPE = 13
 }

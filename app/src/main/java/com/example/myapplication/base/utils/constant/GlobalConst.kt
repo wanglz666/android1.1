@@ -104,6 +104,13 @@ object GlobalConst {
                     ItemType.ITEM_SWIPE_LAYOUT_TYPE
                 )
             )
+            add(
+                DataEntity(
+                    "防ios回弹",
+                    "防ios回弹动画",
+                    ItemType.ITEM_SPRING_BACK_TYPE
+                )
+            )
 
         }
 

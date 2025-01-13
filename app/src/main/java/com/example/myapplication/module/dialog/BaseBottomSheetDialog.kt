@@ -6,6 +6,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.widget.TextView
 import com.example.myapplication.R
+import com.example.myapplication.base.bean.DialogBuilder
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
 /**

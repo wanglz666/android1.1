@@ -20,6 +20,7 @@ import com.example.myapplication.module.flowLayout.TextFlowActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiListActivity
 import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
+import com.example.myapplication.module.springBack.SpringBackActivity
 import com.example.myapplication.module.swipeLayout.SwipeLayoutActivity
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
@@ -96,6 +97,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 }
                 ItemType.ITEM_SWIPE_LAYOUT_TYPE -> {
                     intent.setClass(this, SwipeLayoutActivity::class.java)
+                }
+                ItemType.ITEM_SPRING_BACK_TYPE -> {
+                    intent.setClass(this, SpringBackActivity::class.java)
                 }
             }
 
