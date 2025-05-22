@@ -102,4 +102,25 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/sp_14"
+        android:text="n行效果：maxLines = 3 "
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/sp_14"
+        android:textSize="14sp"
+        android:text="长数据长数据长数据长数据长数据长数据长数据长数据长数据"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:textColor="@color/color_333333"/>
+
+
 </LinearLayout>

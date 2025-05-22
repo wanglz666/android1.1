@@ -1,12 +1,20 @@
 package com.example.myapplication.module.textTest
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.RelativeLayout.ALIGN_TOP
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
+import com.example.myapplication.R
 import com.example.myapplication.base.component.BaseActivity
 import com.example.myapplication.databinding.ActivityFollowTagBinding
+import com.scwang.smart.refresh.layout.util.SmartUtil
+
 
 /**
  * 参考https://juejin.cn/post/6891284263174406157?searchId=2023112710130194F12865E1177E99712D
@@ -35,6 +43,42 @@ class FollowTagActivity : BaseActivity() {
             }
         }
 
+
+        // n行
+        followTag()
+    }
+
+    private fun followTag() {
+        binding.tvContent.post { // 计算文字超出部分做精确截取
+            var text = "$tagSrc(精)"
+            binding.tvContent.text = text
+            val ellipsisCount: Int =
+                binding.tvContent.layout.getEllipsisCount(binding.tvContent.lineCount - 1)
+            if (ellipsisCount > 0) {
+                text = text.substring(0, text.length - ellipsisCount - 1) + "…(精)"
+            }
+
+            // 创建SpannableString对象
+            val imageString = SpannableString(text)
+
+            // 获取图片资源并设置绘制边界
+            val image: Drawable? = AppCompatResources.getDrawable(mActivity, R.drawable.arrow_down)
+            val left: Int = SmartUtil.dp2px(0F)
+            val top: Int = SmartUtil.dp2px(0F)
+            val right: Int = SmartUtil.dp2px(16F)
+            val bottom: Int = SmartUtil.dp2px(16F)
+            image?.setBounds(left, top, right, bottom)
+
+            // 创建图片样式对象替换占位符
+            val imageSpan = AlignTopImageSpan(image, ALIGN_TOP)
+            imageString.setSpan(
+                imageSpan,
+                imageString.length - 3,
+                imageString.length,
+                Spanned.SPAN_INCLUSIVE_INCLUSIVE
+            )
+            binding.tvContent.text = imageString
+        }
     }
 
     /**
