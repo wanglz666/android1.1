@@ -57,4 +57,8 @@ object ItemType {
      * 回弹动画
      */
     const val ITEM_SPRING_BACK_TYPE = 13
+    /**
+     * 追随标签
+     */
+    const val ITEM_FOLLOW_TAG_TYPE = 14
 }

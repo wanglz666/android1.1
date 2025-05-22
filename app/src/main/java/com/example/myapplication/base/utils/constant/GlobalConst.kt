@@ -99,16 +99,24 @@ object GlobalConst {
             )
             add(
                 DataEntity(
-                    "列表滑动",
+                    "列表菜单滑动",
                     "类似QQ左划",
                     ItemType.ITEM_SWIPE_LAYOUT_TYPE
                 )
             )
             add(
                 DataEntity(
-                    "防ios回弹",
-                    "防ios回弹动画",
+                    "仿ios回弹",
+                    "仿ios回弹动画",
                     ItemType.ITEM_SPRING_BACK_TYPE
+                )
+            )
+
+            add(
+                DataEntity(
+                    "实现跟随标签",
+                    "单行或多行，标签前可显示...",
+                    ItemType.ITEM_FOLLOW_TAG_TYPE
                 )
             )
 

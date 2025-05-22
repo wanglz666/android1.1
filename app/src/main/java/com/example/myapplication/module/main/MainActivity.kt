@@ -22,6 +22,7 @@ import com.example.myapplication.module.recyclerview.multiList.BRVAHSimpleMultiL
 import com.example.myapplication.module.recyclerview.multiList.SimpleMultiListActivity
 import com.example.myapplication.module.springBack.SpringBackActivity
 import com.example.myapplication.module.swipeLayout.SwipeLayoutActivity
+import com.example.myapplication.module.textTest.FollowTagActivity
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
 
@@ -56,7 +57,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
         mAdapter.setList(GlobalConst.initMainData())
 
 //        binding.refreshLayout.autoRefresh()
-        binding.refreshLayout.setEnableLoadMoreWhenContentNotFull(false);//取消内容不满一页时开启上拉加载功能
+//        binding.refreshLayout.setEnableLoadMoreWhenContentNotFull(false);//取消内容不满一页时开启上拉加载功能
+        binding.refreshLayout.setEnableRefresh(false)
+        binding.refreshLayout.setEnableLoadMore(false)
         binding.refreshLayout.setOnRefreshListener(this)
         binding.refreshLayout.setOnLoadMoreListener(this)
 
@@ -100,6 +103,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 }
                 ItemType.ITEM_SPRING_BACK_TYPE -> {
                     intent.setClass(this, SpringBackActivity::class.java)
+                }
+                ItemType.ITEM_FOLLOW_TAG_TYPE -> {
+                    intent.setClass(this, FollowTagActivity::class.java)
                 }
             }
 
