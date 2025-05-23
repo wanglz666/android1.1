@@ -12,6 +12,7 @@ import com.example.myapplication.base.utils.constant.ItemType
 import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.dialog.BaseBottomSheetDialog
+import com.example.myapplication.module.expandText.ExpandTextActivity
 import com.example.myapplication.module.login.model.LoginResponse
 import com.example.myapplication.module.expandlistview.ExpandListActivity
 import com.example.myapplication.module.recyclerview.drag.DragListActivity
@@ -106,6 +107,9 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 }
                 ItemType.ITEM_FOLLOW_TAG_TYPE -> {
                     intent.setClass(this, FollowTagActivity::class.java)
+                }
+                ItemType.ITEM_EXPAND_TEXT_TYPE -> {
+                    intent.setClass(this, ExpandTextActivity::class.java)
                 }
             }
 

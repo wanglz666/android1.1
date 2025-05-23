@@ -16,6 +16,9 @@
         android:theme="@style/App.Theme"
         tools:targetApi="31">
         <activity
+            android:name=".module.expandText.ExpandTextActivity"
+            android:exported="false" />
+        <activity
             android:name=".module.textTest.FollowTagActivity"
             android:exported="false" />
         <activity

@@ -61,4 +61,8 @@ object ItemType {
      * 追随标签
      */
     const val ITEM_FOLLOW_TAG_TYPE = 14
+    /**
+     * 展开折叠Text
+     */
+    const val ITEM_EXPAND_TEXT_TYPE = 15
 }

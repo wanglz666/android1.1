@@ -66,8 +66,9 @@ class FollowTagActivity : BaseActivity() {
             // 创建SpannableString对象
             val imageString = SpannableString(text)
 
-            // 获取图片资源并设置绘制边界
+            // 实现后的效果如下，发现图片在行内没有垂直居中显示（修改图片的画布大小，在保留原始图片的基础上在其下方留白）
             val image: Drawable? = AppCompatResources.getDrawable(mActivity, R.drawable.arrow_down)
+            // 字体大小是16sp，因此将bounds的属性分别设置为：左，0dp；上，0dp；右，16dp；下，16dp
             val left: Int = SmartUtil.dp2px(0F)
             val top: Int = SmartUtil.dp2px(0F)
             val right: Int = SmartUtil.dp2px(16F)

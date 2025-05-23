@@ -119,6 +119,13 @@ object GlobalConst {
                     ItemType.ITEM_FOLLOW_TAG_TYPE
                 )
             )
+            add(
+                DataEntity(
+                    "展开折叠Text",
+                    "展开折叠Text",
+                    ItemType.ITEM_EXPAND_TEXT_TYPE
+                )
+            )
 
         }
 
