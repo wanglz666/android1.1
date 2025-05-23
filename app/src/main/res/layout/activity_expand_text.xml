@@ -4,8 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".module.expandText.ExpandTextActivity">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/sp_14"
+        android:text="链接、展开折叠，带动画等等"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <com.example.myapplication.module.expandText.ExpandableTextView
         android:id="@+id/etv_expand"
@@ -19,6 +30,32 @@
         app:ep_need_expand="true"
         app:ep_need_link="false"
         app:ep_need_mention="false"
-        app:ep_need_animation="false"/>
+        app:ep_need_animation="false" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/sp_14"
+        android:text="简单的展开折叠View"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <com.example.myapplication.module.expandText.simpleExpandText.ExpandTextView
+        android:id="@+id/text_view_show_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="这个价钱不一定啊。那就买个油耗低那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车那就买个油耗低的车的车，这样就 便宜很多了哈哈！这个价钱不一定啊。那就买个油耗低的车，这样就便宜很多了哈哈！"/>
 
 </LinearLayout>
