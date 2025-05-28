@@ -1,4 +1,4 @@
-package com.example.myapplication.module.recyclerview.multiList
+package com.example.myapplication.module.recyclerview.multiList.provider
 
 import android.view.View
 import com.chad.library.adapter.base.provider.BaseItemProvider

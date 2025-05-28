@@ -3,8 +3,8 @@ package com.example.myapplication.base.component
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.base.utils.ClickDebounce
-import com.example.myapplication.base.utils.constant.GlobalConst
+import com.example.myapplication.base.utils.view.ClickDebounce
+import com.example.myapplication.base.constant.GlobalConst
 import com.example.myapplication.base.utils.extend.errorToast
 
 abstract class BaseActivity : AppCompatActivity() , IBaseActivity{

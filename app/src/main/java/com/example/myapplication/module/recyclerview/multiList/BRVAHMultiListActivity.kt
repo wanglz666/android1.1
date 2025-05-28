@@ -7,6 +7,7 @@ import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
 import com.example.myapplication.base.utils.extend.infoToast
 import com.example.myapplication.databinding.ActivitySimpleMultiListBinding
+import com.example.myapplication.module.recyclerview.multiList.adapter.BRVAHMultiListAdapter
 import kotlin.random.Random
 
 /**
@@ -28,7 +29,7 @@ class BRVAHMultiListActivity : BaseActivity() {
                 val int = Random.nextInt(1, 4)
                 val dataEntity = DataEntity("Style-Title", "Style-Content", int)
                 mItemData = arrayListOf()
-                repeat(5) {
+                repeat(20) {
                     val itemDataEntity = DataEntity("Item-Style-Title", "Item-Style-Content", int)
                     mItemData!!.add(itemDataEntity)
                 }

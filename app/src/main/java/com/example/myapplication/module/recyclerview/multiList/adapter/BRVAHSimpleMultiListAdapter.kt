@@ -1,4 +1,4 @@
-package com.example.myapplication.module.recyclerview.multiList
+package com.example.myapplication.module.recyclerview.multiList.adapter
 
 import com.chad.library.adapter.base.BaseMultiItemQuickAdapter
 import com.chad.library.adapter.base.viewholder.BaseViewHolder

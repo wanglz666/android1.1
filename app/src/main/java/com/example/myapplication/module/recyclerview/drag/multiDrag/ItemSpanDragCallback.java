@@ -12,8 +12,8 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
 import com.example.myapplication.R;
 import com.example.myapplication.base.bean.DataEntity;
-import com.example.myapplication.base.utils.DeepCopyUtil;
-import com.example.myapplication.base.utils.constant.GlobalConst;
+import com.example.myapplication.base.utils.data.DeepCopyUtil;
+import com.example.myapplication.base.constant.GlobalConst;
 
 import java.util.Collections;
 import java.util.List;

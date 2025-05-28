@@ -1,4 +1,4 @@
-package com.example.myapplication.base.utils.constant
+package com.example.myapplication.base.constant
 
 object ItemType {
     const val ITEM_HEADER_TYPE = 1

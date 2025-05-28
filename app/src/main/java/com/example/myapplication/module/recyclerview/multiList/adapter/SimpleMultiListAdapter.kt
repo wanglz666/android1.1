@@ -1,4 +1,4 @@
-package com.example.myapplication.module.recyclerview.multiList
+package com.example.myapplication.module.recyclerview.multiList.adapter
 
 import android.content.Context
 import android.view.LayoutInflater.*
@@ -55,10 +55,8 @@ class SimpleMultiListAdapter(val context: Context, val mData: MutableList<DataEn
 
         when (holder) {
             is Style1ViewHolder -> {
-                val style1Binding = ItemStyle1Binding.bind(holder.itemView)
-                style1Binding.tvStyle1.setOnClickListener {
-                    style1Binding.tvStyle1.text.toString().infoToast()
-                }
+                holder.bindView()
+
             }
             is Style2ViewHolder -> {
                 val style2Binding = ItemStyle2Binding.bind(holder.itemView)
@@ -74,7 +72,14 @@ class SimpleMultiListAdapter(val context: Context, val mData: MutableList<DataEn
             }
         }
     }
-    class Style1ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
+    class Style1ViewHolder(var view: ItemStyle1Binding): BaseViewHolder(view.root){
+
+        fun bindView() {
+            view.tvStyle1.setOnClickListener {
+                "测试ViewBinding".infoToast()
+            }
+        }
+    }
     class Style2ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
     class Style3ViewHolder(view: ViewBinding): BaseViewHolder(view.root)
 }

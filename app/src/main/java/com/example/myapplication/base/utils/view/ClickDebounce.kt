@@ -1,4 +1,4 @@
-package com.example.myapplication.base.utils
+package com.example.myapplication.base.utils.view
 
 
 /**

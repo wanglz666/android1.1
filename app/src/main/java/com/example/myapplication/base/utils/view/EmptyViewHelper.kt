@@ -1,7 +1,7 @@
-package com.example.myapplication.base.utils
-import com.example.myapplication.base.utils.Type.Companion.NO
-import com.example.myapplication.base.utils.Type.Companion.PAGE_STATUS_DATA
-import com.example.myapplication.base.utils.Type.Companion.PAGE_STATUS_INFO
+package com.example.myapplication.base.utils.view
+import com.example.myapplication.base.utils.view.Type.Companion.NO
+import com.example.myapplication.base.utils.view.Type.Companion.PAGE_STATUS_DATA
+import com.example.myapplication.base.utils.view.Type.Companion.PAGE_STATUS_INFO
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

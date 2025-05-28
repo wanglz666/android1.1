@@ -1,9 +1,8 @@
-package com.example.myapplication.module.recyclerview.multiList
+package com.example.myapplication.module.recyclerview.multiList.provider
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.chad.library.adapter.base.BaseQuickAdapter
@@ -32,7 +31,7 @@ class BRVAHMultiListProvider1 : BaseItemProvider<DataEntity>() {
     }
     override fun convert(helper: BaseViewHolder, item: DataEntity) {
         val binding = ItemStyle1Binding.bind(helper.itemView)
-        binding.recyclerView.layoutManager = GridLayoutManager(context, 4)
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
         binding.recyclerView.adapter = ProviderAdapter(item.itemList!!)
 
     }

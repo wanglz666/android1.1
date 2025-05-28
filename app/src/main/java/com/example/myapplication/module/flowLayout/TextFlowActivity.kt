@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
-import com.example.myapplication.base.utils.constant.GlobalConst
+import com.example.myapplication.base.constant.GlobalConst
 import com.example.myapplication.base.utils.extend.infoToast
 import com.scwang.smart.refresh.layout.util.SmartUtil.dp2px
 

@@ -1,6 +1,6 @@
 package com.example.myapplication.base.http
 
-import com.example.myapplication.base.utils.constant.GlobalConst
+import com.example.myapplication.base.constant.GlobalConst
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

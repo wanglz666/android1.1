@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
 import com.example.myapplication.databinding.ActivitySimpleMultiListBinding
+import com.example.myapplication.module.recyclerview.multiList.adapter.SimpleMultiListAdapter
 import kotlin.random.Random
 
 /**

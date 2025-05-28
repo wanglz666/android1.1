@@ -1,7 +1,10 @@
-package com.example.myapplication.module.recyclerview.multiList
+package com.example.myapplication.module.recyclerview.multiList.adapter
 
 import com.chad.library.adapter.base.BaseProviderMultiAdapter
 import com.example.myapplication.base.bean.DataEntity
+import com.example.myapplication.module.recyclerview.multiList.provider.BRVAHMultiListProvider1
+import com.example.myapplication.module.recyclerview.multiList.provider.BRVAHMultiListProvider2
+import com.example.myapplication.module.recyclerview.multiList.provider.BRVAHMultiListProvider3
 
 /**
  * Created by WangLiZhi on 2024/12/11.

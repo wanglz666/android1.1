@@ -3,12 +3,11 @@ package com.example.myapplication.module.recyclerview.multiList
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.chad.library.adapter.base.BaseQuickAdapter
-import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
 import com.example.myapplication.base.utils.extend.infoToast
 import com.example.myapplication.databinding.ActivitySimpleMultiListBinding
+import com.example.myapplication.module.recyclerview.multiList.adapter.BRVAHSimpleMultiListAdapter
 import kotlin.random.Random
 
 /**

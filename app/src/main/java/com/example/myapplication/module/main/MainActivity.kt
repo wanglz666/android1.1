@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.R
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.base.component.BaseActivity
-import com.example.myapplication.base.utils.constant.GlobalConst
-import com.example.myapplication.base.utils.constant.ItemType
+import com.example.myapplication.base.constant.GlobalConst
+import com.example.myapplication.base.constant.ItemType
 import com.example.myapplication.base.utils.extend.successToast
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.module.dialog.BaseBottomSheetDialog
@@ -26,6 +26,7 @@ import com.example.myapplication.module.swipeLayout.SwipeLayoutActivity
 import com.example.myapplication.module.textTest.FollowTagActivity
 import com.scwang.smart.refresh.layout.api.RefreshLayout
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener
+import com.tapadoo.alerter.Alerter
 
 /**
  * 首页功能列表
@@ -74,40 +75,56 @@ class MainActivity : BaseActivity(), OnRefreshLoadMoreListener {
                 ItemType.ITEM_EXPAND_LISTVIEW_TYPE -> {
                     intent.setClass(this, ExpandListActivity::class.java)
                 }
+
                 ItemType.ITEM_SIMPLE_MULTI_TYPE -> {
                     intent.setClass(this, SimpleMultiListActivity::class.java)
                 }
+
                 ItemType.ITEM_BRVAH_SIMPLE_MULTI_TYPE -> {
                     intent.setClass(this, BRVAHSimpleMultiListActivity::class.java)
                 }
+
                 ItemType.ITEM_BRVAH_MULTI_TYPE -> {
                     intent.setClass(this, BRVAHMultiListActivity::class.java)
                 }
+
                 ItemType.ITEM_BRVAH_DRAG_TYPE -> {
                     intent.setClass(this, DragListActivity::class.java)
                 }
+
                 ItemType.ITEM_BRVAH_PAIR_DRAG_TYPE -> {
                     intent.setClass(this, PairDragListActivity::class.java)
                 }
+
                 ItemType.ITEM_DIALOG_SLIDE_TYPE -> {
-                    val dialog = BaseBottomSheetDialog(mActivity)
-                    dialog.show()
+                    Alerter.create(this)
+                        .setTitle("Alert Title")
+                        .setText("Alert text...")
+                        .setBackgroundColorRes(R.color.colorAccent) // or setBackgroundColorInt(Color.CYAN)
+                        .show()
+//                    val dialog = BaseBottomSheetDialog(mActivity)
+//                    dialog.show()
 //                    val dialog = BottomSheetDialog(this, R.style.BottomSheetDialog)
 //                    dialog.setContentView(R.layout.dialog_bottom_sheet_layout)
 //                    dialog.show()
                 }
+
                 ItemType.ITEM_FLOW_TEXT_TYPE -> {
                     intent.setClass(this, TextFlowActivity::class.java)
                 }
+
                 ItemType.ITEM_SWIPE_LAYOUT_TYPE -> {
                     intent.setClass(this, SwipeLayoutActivity::class.java)
                 }
+
                 ItemType.ITEM_SPRING_BACK_TYPE -> {
                     intent.setClass(this, SpringBackActivity::class.java)
                 }
+
                 ItemType.ITEM_FOLLOW_TAG_TYPE -> {
                     intent.setClass(this, FollowTagActivity::class.java)
                 }
+
                 ItemType.ITEM_EXPAND_TEXT_TYPE -> {
                     intent.setClass(this, ExpandTextActivity::class.java)
                 }

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.base.component.BaseActivity
-import com.example.myapplication.base.utils.constant.GlobalConst
+import com.example.myapplication.base.constant.GlobalConst
 import com.example.myapplication.base.utils.extend.hasData
 import com.example.myapplication.base.utils.extend.infoLongToast
 import com.example.myapplication.databinding.ActivityDragListBinding

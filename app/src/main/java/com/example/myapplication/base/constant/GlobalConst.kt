@@ -1,4 +1,4 @@
-package com.example.myapplication.base.utils.constant
+package com.example.myapplication.base.constant
 
 import com.example.myapplication.base.bean.DataEntity
 import com.example.myapplication.module.flowLayout.ShowItem
